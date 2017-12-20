@@ -1,0 +1,15 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Blog Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+	<form action="save" th:attr="action=@{${myPage.formAction}}">
+	    <input type="text" name="name" />
+	    <input type="submit" value="Submit" th:attr="value=${myPage.submitValue}"/>
+	</form>
+	<img src="glowing_plant_life.jpg" th:attr="src=@{/images(name=${myPage.imageName})},
+	                  title=${myPage.imageTitle},alt=${myPage.imageTitle}" />
+  </body>
+</html> 
